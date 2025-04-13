@@ -112,6 +112,15 @@ tr:nth-child(even) {
     background-color: #ecf0f1;
 }
 
+#reset-btn {
+    background-color: #e74c3c;
+    margin-top: 10px;
+}
+
+#reset-btn:hover {
+    background-color: #c0392b;
+}
+
 @media (max-width: 600px) {
     body {
         padding: 10px;

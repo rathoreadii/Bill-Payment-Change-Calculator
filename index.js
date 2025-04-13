@@ -171,3 +171,34 @@ document.addEventListener('keypress', function (e) {
         calculateChange();
     }
 });
+
+//  reset button
+const resetBtn = document.getElementById('reset-btn');
+
+// Reset function
+function resetCalculator() {
+    // Clear input fields
+    billAmountInput.value = '';
+    paidAmountInput.value = '';
+    
+    // Hide error message
+    errorElement.style.display = 'none';
+    errorElement.textContent = '';
+    
+    // Hide results
+    resultElement.style.display = 'none';
+    
+    // Clear results table
+    changeBodyElement.innerHTML = '';
+    
+    // Reset totals display
+    totalChangeElement.textContent = '0';
+    totalNotesElement.textContent = '0';
+    totalAmountElement.textContent = '₹0';
+    
+    // Focus on first input field
+    billAmountInput.focus();
+}
+
+// Event listener for reset button
+resetBtn.addEventListener('click', resetCalculator);
